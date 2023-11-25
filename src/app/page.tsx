@@ -1,10 +1,9 @@
 import Image from "next/image";
-
 export default function Home() {
   return (
     //relative flex items-end max-w-screen-xl mx-auto
     <main className="flex flex-col items-center min-h-screen bg-white">
-      <div className="flex flex-col items-center h-64 xl:h-96 w-full p-6 bg-indigo-700 mt-16">
+      <div className="flex flex-col items-center h-64 xl:h-96 w-full p-4 bg-indigo-700 mt-16">
         <div className=" w-full xl:w-[1200px] mt-8 md:mt-2 2xl:mt-16">
           <p className="text-lg md:text-2xl mt-4 my-auto flex items-center text-white">
             더 나은 디스코드 서버를 위해
@@ -17,7 +16,7 @@ export default function Home() {
           </h2>
         </div>
       </div>
-      <div className="px-6 w-full xl:w-[1200px] mt-6">
+      <div className="w-full xl:w-[1200px] mt-10 sm:px-2 px-6">
         <div className="flex items-center space-x-2">
           <h1 className="text-3xl font-bold">겜섭의 스토어</h1>
           <svg
@@ -33,11 +32,91 @@ export default function Home() {
             />
           </svg>
         </div>
-        <div className="flex items-center w-full mt-6 grid grid-cols-4 gap-x-6">
-          <h1>테스트</h1>
-          <h1>테스트</h1>
-          <h1>테스트</h1>
-          <h1>테스트</h1>
+        <div className="flex mt-6 grid sm:grid-cols-4 grid-cols-2 place-items-center gap-x-4">
+          <div className="group relative rounded-xl mb-8">
+            <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
+              <img
+                src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMDNfMjU4/MDAxNTIwMDQxODA4Mjc0.gR3L5xx3IbpACbvRRF9j9xjJmO-EPAY35oF1AdBnDcog.WZyeqFi6cMmH-v-R-ec44Ny6ZgVyAJIYMT78p4Rxbkwg.PNG.osy2201/2_%2850%ED%8D%BC%EC%84%BC%ED%8A%B8_%ED%9A%8C%EC%83%89%29_%ED%9A%8C%EC%83%89_%EB%8B%A8%EC%83%89_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_180303.png?type=w800"
+                alt="상품 미리보기 이미지"
+                className="dark:bg-gray-900 object-cover object-center w-60 h-40"
+              />
+            </div>
+            <div className="mt-4 flex justify-between">
+              <div>
+                <p className="mt-1 text-sm text-gray-500">이모지+</p>
+                <h3 className="text-sm text-gray-700 dark:text-gray-200">
+                  <span aria-hidden="true" className="absolute inset-0"></span>
+                  [11.25~] 크리스마스 기념 이모지 🎄
+                </h3>
+                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  1,000코인
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="group relative rounded-xl mb-8">
+            <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
+              <img
+                src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMDNfMjU4/MDAxNTIwMDQxODA4Mjc0.gR3L5xx3IbpACbvRRF9j9xjJmO-EPAY35oF1AdBnDcog.WZyeqFi6cMmH-v-R-ec44Ny6ZgVyAJIYMT78p4Rxbkwg.PNG.osy2201/2_%2850%ED%8D%BC%EC%84%BC%ED%8A%B8_%ED%9A%8C%EC%83%89%29_%ED%9A%8C%EC%83%89_%EB%8B%A8%EC%83%89_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_180303.png?type=w800"
+                alt="상품 미리보기 이미지"
+                className="dark:bg-gray-900 object-cover object-center w-60 h-40"
+              />
+            </div>
+            <div className="mt-4 flex justify-between">
+              <div>
+                <p className="mt-1 text-sm text-gray-500">이모지+</p>
+                <h3 className="text-sm text-gray-700 dark:text-gray-200">
+                  <span aria-hidden="true" className="absolute inset-0"></span>
+                  [11.25~] 크리스마스 기념 이모지 🎄
+                </h3>
+                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  1,000코인
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="group relative rounded-xl mb-8">
+            <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
+              <img
+                src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMDNfMjU4/MDAxNTIwMDQxODA4Mjc0.gR3L5xx3IbpACbvRRF9j9xjJmO-EPAY35oF1AdBnDcog.WZyeqFi6cMmH-v-R-ec44Ny6ZgVyAJIYMT78p4Rxbkwg.PNG.osy2201/2_%2850%ED%8D%BC%EC%84%BC%ED%8A%B8_%ED%9A%8C%EC%83%89%29_%ED%9A%8C%EC%83%89_%EB%8B%A8%EC%83%89_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_180303.png?type=w800"
+                alt="상품 미리보기 이미지"
+                className="dark:bg-gray-900 object-cover object-center w-60 h-40"
+              />
+            </div>
+            <div className="mt-4 flex justify-between">
+              <div>
+                <p className="mt-1 text-sm text-gray-500">이모지+</p>
+                <h3 className="text-sm text-gray-700 dark:text-gray-200">
+                  <span aria-hidden="true" className="absolute inset-0"></span>
+                  [11.25~] 크리스마스 기념 이모지 🎄
+                </h3>
+                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  1,000코인
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="group relative rounded-xl mb-8">
+            <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
+              <img
+                src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMDNfMjU4/MDAxNTIwMDQxODA4Mjc0.gR3L5xx3IbpACbvRRF9j9xjJmO-EPAY35oF1AdBnDcog.WZyeqFi6cMmH-v-R-ec44Ny6ZgVyAJIYMT78p4Rxbkwg.PNG.osy2201/2_%2850%ED%8D%BC%EC%84%BC%ED%8A%B8_%ED%9A%8C%EC%83%89%29_%ED%9A%8C%EC%83%89_%EB%8B%A8%EC%83%89_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_180303.png?type=w800"
+                alt="상품 미리보기 이미지"
+                className="dark:bg-gray-900 object-cover object-center w-60 h-40"
+              />
+            </div>
+            <div className="mt-4 flex justify-between">
+              <div>
+                <p className="mt-1 text-sm text-gray-500">이모지+</p>
+                <h3 className="text-sm text-gray-700 dark:text-gray-200">
+                  <span aria-hidden="true" className="absolute inset-0"></span>
+                  [11.25~] 크리스마스 기념 이모지 🎄
+                </h3>
+                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  1,000코인
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
