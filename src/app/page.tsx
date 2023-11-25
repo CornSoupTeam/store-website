@@ -16,7 +16,7 @@ export default function Home() {
           </h2>
         </div>
       </div>
-      <div className="w-full xl:w-[1200px] mt-10 sm:px-2 px-6">
+      <div className="w-full xl:w-[1200px] mt-10 sm:px-2 lg:px-4 px-6">
         <div className="flex items-center space-x-2">
           <h1 className="text-3xl font-bold">겜섭의 스토어</h1>
           <svg
