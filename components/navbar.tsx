@@ -1,10 +1,11 @@
-// Navbar.js
-const Navbar = () => {
+export default function Navbar() {
   return (
     <nav className="border-gray-200 fixed top-0 w-full border-b py-2.5 bg-white bg-opacity-75 backdrop-blur-xl z-10">
       <div className="container mx-auto w-full max-w-7xl py-2 px-6 flex flex-wrap items-center justify-between">
         <div className="flex w-auto h-[30px] relative cursor-pointer">
-          <h1 className="text-2xl font-bold">Cornbot</h1>
+          <a className="text-2xl font-bold" href="/">
+            Cornbot
+          </a>
         </div>
         <button
           data-collapse-toggle="mobile-menu"
@@ -31,21 +32,24 @@ const Navbar = () => {
         </button>
         <div className="hidden md:block w-full md:w-auto" id="mobile-menu">
           <ul className="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
-            <li>
-              <span className="text-sm text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 select-none cursor-pointer">
-                로그인
-              </span>
-            </li>
-            <li>
-              <span className="text-sm text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 select-none cursor-pointer">
-                리더보드
-              </span>
-            </li>
+            <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </ul>
         </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
