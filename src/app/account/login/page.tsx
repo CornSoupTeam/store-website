@@ -6,6 +6,7 @@ import AuthContext from "../authcontent";
 
 export default function AuthenticationPage() {
   const { data: session, status } = useSession();
+
   if (status == "unauthenticated") {
     return (
       <div className="flex min-h-screen bg-white flex flex-col justify-center px-6 lg:px-8">
@@ -18,7 +19,7 @@ export default function AuthenticationPage() {
           <div>
             <button
               className="w-full text-white bg-indigo-500 text-center transform ease-in duration-100 active:scale-95 mt-2 items-center rounded-xl m-auto py-2 font-bold pl-4"
-              onClick={() => signIn("discord")}
+              onClick={() => signIn("discord", { callbackUrl: "/account" })}
             >
               Discord로 로그인하기
             </button>
@@ -27,10 +28,9 @@ export default function AuthenticationPage() {
         </div>
       </div>
     );
-  } else
+  } else {
     return (
-      <AuthContext>
-        <meta http-equiv="refresh" content="0; url=/account"></meta>
-      </AuthContext>
+      <div className="flex min-h-screen bg-white flex flex-col justify-center px-6 lg:px-8"></div>
     );
+  }
 }

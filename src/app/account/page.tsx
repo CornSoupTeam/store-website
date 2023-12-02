@@ -57,7 +57,7 @@ export default function AuthenticationPage() {
               </button>
               <button
                 className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold pl-4"
-                onClick={() => signIn("discord")}
+                onClick={() => signOut()}
               >
                 로그아웃
               </button>
