@@ -1,7 +1,5 @@
 import NextAuth from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
-import GoogleProvider from "next-auth/providers/google";
-import KakaoProvider from "next-auth/providers/kakao";
 
 export const authOptions = {
   // Configure one or more authentication providers
