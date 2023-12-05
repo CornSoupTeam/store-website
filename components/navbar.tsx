@@ -10,7 +10,7 @@ export default function Navbar() {
 
         <a
           className="md:flex-row flex md:space-x-8 md:mt-0 md:text-sm md:font-medium"
-          href="/account/login"
+          href="/account"
         >
           <svg
             width="20px"

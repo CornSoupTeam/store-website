@@ -48,27 +48,34 @@ export default function AuthenticationPage() {
                 />
               </svg>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 mt-4 gap-3">
+            <div className="mt-6 w-fit mx-auto">
+              <img
+                src={session?.user?.image}
+                className="rounded-full"
+                alt="profile picture"
+              />
+            </div>
+            <div className="grid grid-cols-1 mt-10 gap-3">
               <button
-                className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold pl-4"
+                className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold"
                 onClick={() => signIn("discord")}
               >
                 서버 관리
               </button>
               <button
-                className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold pl-4"
+                className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold"
                 onClick={() => signOut()}
               >
                 로그아웃
               </button>
               <button
-                className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold pl-4"
+                className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold"
                 onClick={() => signIn("discord")}
               >
                 탈퇴하기
               </button>
               <button
-                className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95  items-center rounded-xl m-auto py-2 font-bold pl-4"
+                className="w-full text-white bg-black text-center transform ease-in duration-100 active:scale-95  items-center rounded-xl m-auto py-2 font-bold"
                 onClick={() => signIn("discord")}
               >
                 서포트 서버
