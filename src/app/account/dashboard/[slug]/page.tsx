@@ -48,6 +48,27 @@ export default function AuthenticationPage() {
               </svg>
             </div>
             <h1>아래의 설정을 통해 서버의 봇 설정을 변경 해보세요.</h1>
+            <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-2.5 gap-y-2.5 mt-6">
+              <div className="box">
+                <div className="text-2xl font-semibold">판매중인 상품</div>
+                <div className="text-xl">1개</div>
+              </div>
+              <div className="box">
+                <div className="text-2xl font-semibold">총 판매량</div>
+                <div className="text-xl">1개</div>
+              </div>
+              <div className="box">
+                <div className="text-2xl font-semibold">최근 관리자 로그인</div>
+                <div className="text-xl">1개</div>
+              </div>
+              <div className="box">
+                <div className="text-2xl font-semibold">구매 수량</div>
+                <div className="text-xl">1개</div>
+              </div>
+            </div>
+            <h1 className="mt-2 text-sm">
+              🛈 해당 데이터는 일주일간의 데이터를 기준으로 합니다.
+            </h1>
             <label className="relative inline-flex items-center cursor-pointer mt-10">
               <input type="checkbox" value="" className="sr-only peer" />
               <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
