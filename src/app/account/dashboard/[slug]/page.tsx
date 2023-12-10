@@ -47,7 +47,6 @@ export default function AuthenticationPage() {
                 />
               </svg>
             </div>
-            <h1>아래의 설정을 통해 서버의 봇 설정을 변경 해보세요.</h1>
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-2.5 gap-y-2.5 mt-6">
               <div className="box">
                 <div className="text-2xl font-semibold">판매중인 상품</div>
@@ -66,10 +65,10 @@ export default function AuthenticationPage() {
                 <div className="text-xl">1개</div>
               </div>
             </div>
-            <h1 className="mt-2 text-sm">
+            <h1 className="mt-2 text-xs text-slate-400">
               🛈 해당 데이터는 일주일간의 데이터를 기준으로 합니다.
             </h1>
-            <hr className="my-12 h-0.5 border-t-0 bg-neutral-300 opacity-100 dark:opacity-50" />
+            <hr className="my-8 h-0.5 border-t-0 bg-neutral-300 opacity-100 dark:opacity-50" />
             <div className="text-2xl font-semibold">스토어 서비스 관리</div>
             <div className="grid grid-cols-1 lg:grid-cols-4">
               <label className="relative inline-flex items-center cursor-pointer mt-5">
@@ -100,6 +99,16 @@ export default function AuthenticationPage() {
                   출석 체크
                 </span>
               </label>
+            </div>
+            <hr className="my-8 h-0.5 border-t-0 bg-neutral-300 opacity-100 dark:opacity-50" />
+            <div className="text-2xl font-semibold">판매 물품 관리</div>
+            <div className="my-4 grid grid-cols-1 lg:grid-cols-4 lg:space-x-4">
+              <a
+                href="/new"
+                className="hover:border-transparent hover:shadow-xs w-full flex items-center justify-center rounded-lg border-2 border-dashed border-gray-200 text-sm font-medium py-4"
+              >
+                생성하기
+              </a>
             </div>
           </div>
         </div>
