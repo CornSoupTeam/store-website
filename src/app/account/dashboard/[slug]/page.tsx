@@ -28,22 +28,22 @@ export default function AuthenticationPage() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M11.7 14C10.623 14 9.74999 13.1046 9.74999 12C9.74999 10.8954 10.623 10 11.7 10C12.7769 10 13.65 10.8954 13.65 12C13.65 12.5304 13.4445 13.0391 13.0789 13.4142C12.7132 13.7893 12.2172 14 11.7 14Z"
                   stroke="#000000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M16.8841 16.063V14.721C16.8841 14.3887 17.0128 14.07 17.2419 13.835L18.1672 12.886C18.6443 12.3967 18.6443 11.6033 18.1672 11.114L17.2419 10.165C17.0128 9.93001 16.8841 9.61131 16.8841 9.27899V7.93599C16.8841 7.24398 16.3371 6.68299 15.6624 6.68299H14.353C14.029 6.68299 13.7182 6.55097 13.4891 6.31599L12.5638 5.36699C12.0867 4.87767 11.3132 4.87767 10.8361 5.36699L9.91087 6.31599C9.68176 6.55097 9.37102 6.68299 9.04702 6.68299H7.73759C7.41341 6.68299 7.10253 6.81514 6.87339 7.05034C6.64425 7.28554 6.51566 7.6045 6.51592 7.93699V9.27899C6.51591 9.61131 6.3872 9.93001 6.15809 10.165L5.23282 11.114C4.75573 11.6033 4.75573 12.3967 5.23282 12.886L6.15809 13.835C6.3872 14.07 6.51591 14.3887 6.51592 14.721V16.063C6.51592 16.755 7.06288 17.316 7.73759 17.316H9.04702C9.37102 17.316 9.68176 17.448 9.91087 17.683L10.8361 18.632C11.3132 19.1213 12.0867 19.1213 12.5638 18.632L13.4891 17.683C13.7182 17.448 14.029 17.316 14.353 17.316H15.6614C15.9856 17.3163 16.2966 17.1844 16.5259 16.9493C16.7552 16.7143 16.8841 16.3955 16.8841 16.063Z"
                   stroke="#000000"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
@@ -102,14 +102,42 @@ export default function AuthenticationPage() {
             </div>
             <hr className="my-8 h-0.5 border-t-0 bg-neutral-300 opacity-100 dark:opacity-50" />
             <div className="text-2xl font-semibold">판매 물품 관리</div>
-            <div className="my-4 grid grid-cols-1 lg:grid-cols-4 lg:space-x-4">
+
+            <div className="my-2 grid grid-cols-1 lg:grid-cols-4 lg:space-x-4 space-y-3 lg:space-y-0">
               <a
                 href="/new"
-                className="hover:border-transparent hover:shadow-xs w-full flex items-center justify-center rounded-lg border-2 border-dashed border-gray-200 text-sm font-medium py-4"
+                className="w-full flex items-center justify-center rounded-lg border-2 border-purple-400 text-sm font-medium py-4"
+              >
+                엄준식
+              </a>
+              <a
+                href="/new"
+                className="w-full flex items-center justify-center rounded-lg border-2 border-dashed border-gray-200 text-sm font-medium py-4"
               >
                 생성하기
               </a>
             </div>
+
+            <hr className="my-8 h-0.5 border-t-0 bg-neutral-300 opacity-100 dark:opacity-50" />
+            <div className="text-2xl font-semibold">포인트 획득량 설정</div>
+            <div className="my-2 grid grid-cols-1 lg:grid-cols-4 lg:space-x-4 space-y-3 lg:space-y-0">
+              <input
+                className=" border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="도박"
+              />
+              <input
+                className=" border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="출석"
+              />
+            </div>
+            <h1 className="mb-4 text-xs text-slate-400">
+              🛈 해당 데이터는 일주일간의 데이터를 기준으로 합니다.
+            </h1>
+            <button className="border rounded-lg w-50 py-2 px-3 font-bold text-white leading-tight focus:outline-none focus:shadow-outline bg-purple-400">
+              저장
+            </button>
           </div>
         </div>
       </AuthContext>
