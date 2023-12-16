@@ -20,6 +20,7 @@ export default function AuthenticationPage() {
           <div className="w-full xl:w-[1200px] mt-28 sm:px-2 lg:px-4 px-6">
             <div className="flex items-center space-x-2">
               <h1 className="text-3xl font-bold">겜섭의 설정</h1>
+
               <svg
                 width="30px"
                 height="30px"
@@ -47,6 +48,9 @@ export default function AuthenticationPage() {
                 />
               </svg>
             </div>
+            <h1 className="mt-1 text-xs text-slate-400">
+              🛈 모든 데이터는 일주일간의 데이터를 기준으로 합니다.
+            </h1>
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-x-2.5 gap-y-2.5 mt-6">
               <div className="box">
                 <div className="text-2xl font-semibold">판매중인 상품</div>
@@ -65,11 +69,9 @@ export default function AuthenticationPage() {
                 <div className="text-xl">1개</div>
               </div>
             </div>
-            <h1 className="mt-2 text-xs text-slate-400">
-              🛈 해당 데이터는 일주일간의 데이터를 기준으로 합니다.
-            </h1>
-            <hr className="my-8 h-0.5 border-t-0 bg-neutral-300 opacity-100 dark:opacity-50" />
-            <div className="text-2xl font-semibold">스토어 서비스 관리</div>
+            <div className="mt-10 text-xl font-semibold">
+              스토어 서비스 관리
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-4">
               <label className="relative inline-flex items-center cursor-pointer mt-5">
                 <input type="checkbox" value="" className="sr-only peer" />
@@ -100,13 +102,11 @@ export default function AuthenticationPage() {
                 </span>
               </label>
             </div>
-            <hr className="my-8 h-0.5 border-t-0 bg-neutral-300 opacity-100 dark:opacity-50" />
-            <div className="text-2xl font-semibold">판매 물품 관리</div>
-
+            <div className="mt-10 text-xl font-semibold">판매 물품 관리</div>
             <div className="my-2 grid grid-cols-1 lg:grid-cols-4 lg:space-x-4 space-y-3 lg:space-y-0">
               <a
                 href="/new"
-                className="w-full flex items-center justify-center rounded-lg border-2 border-purple-400 text-sm font-medium py-4"
+                className="w-full flex items-center justify-center rounded-lg border-2 border-gray-400 text-sm font-medium py-4"
               >
                 엄준식
               </a>
@@ -117,9 +117,9 @@ export default function AuthenticationPage() {
                 생성하기
               </a>
             </div>
-
-            <hr className="my-8 h-0.5 border-t-0 bg-neutral-300 opacity-100 dark:opacity-50" />
-            <div className="text-2xl font-semibold">포인트 획득량 설정</div>
+            <div className="mt-10 text-xl font-semibold">
+              포인트 획득량 설정
+            </div>
             <div className="my-2 grid grid-cols-1 lg:grid-cols-4 lg:space-x-4 space-y-3 lg:space-y-0">
               <input
                 className=" border rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -132,10 +132,7 @@ export default function AuthenticationPage() {
                 placeholder="출석"
               />
             </div>
-            <h1 className="mb-4 text-xs text-slate-400">
-              🛈 해당 데이터는 일주일간의 데이터를 기준으로 합니다.
-            </h1>
-            <button className="border rounded-lg w-50 py-2 px-3 font-bold text-white leading-tight focus:outline-none focus:shadow-outline bg-purple-400">
+            <button className="border rounded-lg w-50 py-2 px-3 font-bold text-white leading-tight focus:outline-none focus:shadow-outline bg-purple-400 my-10">
               저장
             </button>
           </div>

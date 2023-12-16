@@ -6,7 +6,7 @@ export default function Navbar() {
           <a className="text-2xl font-bold" href="/">
             Cornbot
           </a>
-        </div>
+        </div>.
 
         <a
           className="md:flex-row flex md:space-x-8 md:mt-0 md:text-sm md:font-medium"
