@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import AuthContext from "./authcontent";
 
 export const metadata: Metadata = {
-  title: "SVER-DEV",
-  description: "SVER-DEV의 강력한 인프라와 함께하세요 :>",
+  title: "어부바",
+  description: "당신을 위한 디스코드 서버, 어부바와 함께하세요",
 };
 
 export default function RootLayout({

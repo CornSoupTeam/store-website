@@ -56,12 +56,7 @@ export default function AuthenticationPage() {
               />
             </div>
             <div className="grid grid-cols-1 mt-10 gap-3">
-              <button
-                className="w-1/2 text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold"
-                onClick={() => signIn("discord")}
-              >
-                서버 관리
-              </button>
+              
               <button
                 className="w-1/2 text-white bg-black text-center transform ease-in duration-100 active:scale-95 items-center rounded-xl m-auto py-2 font-bold"
                 onClick={() => signOut()}
@@ -74,12 +69,7 @@ export default function AuthenticationPage() {
               >
                 탈퇴하기
               </button>
-              <button
-                className="w-1/2 text-white bg-black text-center transform ease-in duration-100 active:scale-95  items-center rounded-xl m-auto py-2 font-bold"
-                onClick={() => signIn("discord")}
-              >
-                서포트 서버
-              </button>
+              
             </div>
           </div>
         </div>

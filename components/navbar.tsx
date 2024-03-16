@@ -4,7 +4,7 @@ export default function Navbar() {
       <div className="container mx-auto w-full max-w-7xl py-2 px-6 flex flex-wrap items-center justify-between">
         <div className="flex w-auto h-[30px] relative cursor-pointer">
           <a className="text-2xl font-bold" href="/">
-            Cornbot
+            어부바
           </a>
         </div>.
 
