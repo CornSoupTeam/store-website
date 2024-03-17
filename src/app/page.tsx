@@ -36,7 +36,7 @@ export default async function ProductPage() {
           </h2>
         </div>
       </div>
-      <div className="w-full xl:w-[1200px] mt-10 sm:px-2 lg:px-4 px-6">
+      <div className="w-full xl:w-[1200px] mt-10 sm:px-2 lg:px-4 px-6 font-black">
         <div className="flex items-center space-x-2">
           <h1 className="text-3xl font-bold">겜섭의 스토어</h1>
           <svg
@@ -52,12 +52,13 @@ export default async function ProductPage() {
             />
           </svg>
         </div>
-        <div className="flex mt-6 grid sm:grid-cols-4 grid-cols-2 place-items-center gap-x-4">
-            {response.map((product) => (
-            <a className="group relative rounded-xl mb-8" href={`/product/${product.count}`}
+        <div className="flex mt-6 grid sm:grid-cols-4 grid-cols-2 place-items-center gap-x-4" >
+            {response.map((product, index) => (
+            <a key={index} className="group relative rounded-xl mb-8" href={`/product/${product.count}`}
             >
               <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
                 <img
+                  key={index}
                   src={product.imgurl}
                   alt={product.name}
                   className="dark:bg-gray-900 object-cover object-center w-60 h-40"
@@ -67,10 +68,10 @@ export default async function ProductPage() {
                 <div>
                   <p className="mt-1 text-sm text-gray-500">이모지+</p>
                   <h3 className="text-sm text-gray-700 dark:text-gray-200">
-                    <span aria-hidden="true" className="absolute inset-0"></span>
+                    <span key={index} aria-hidden="true" className="absolute inset-0"></span>
                     {product.name}
                   </h3>
-                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  <p key={index} className="text-lg font-bold text-gray-900 dark:text-gray-100">
                     {product.price}코인
                   </p>
                 </div>
