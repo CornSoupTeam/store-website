@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import {connectDB} from './db.js'
+import {connectDB} from '../db.js'
+
 export async function GET(request: Request) {
     const client = await connectDB;
     const db = client.db("eobuba")

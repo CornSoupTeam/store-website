@@ -1,21 +1,26 @@
-import { Int32 } from "mongodb";
-
 export type ProductType = {
-  title: string;
+  name: string;
   price: number;
   imgurl: string;
+  count: number;
 };
-async function getData() {
+export async function getData() {
   const res = await fetch(
-    'http://localhost:3001/api/product'
+    'http://localhost:3000/api/product', {cache: "no-cache"}
   );
-  const data:ProductType = await res.json();
-  return data;
+  const data = await res.json();
+  console.log(data)
+  // console.log(data); // 데이터 확인용 로그
+  return data.result;
 }
+
 
 export default async function ProductPage() {
   const response: ProductType[] = await getData();
-
+  if (!Array.isArray(response)) {
+    console.error('데이터가 배열 형태가 아닙니다.');
+    return null; // 또는 적절한 오류 처리를 수행합니다.
+  }
   return (
     <main className="flex flex-col items-center min-h-screen bg-white">
       <div className="flex flex-col items-center h-64 xl:h-96 w-full p-4 bg-indigo-700 mt-16">
@@ -48,98 +53,33 @@ export default async function ProductPage() {
           </svg>
         </div>
         <div className="flex mt-6 grid sm:grid-cols-4 grid-cols-2 place-items-center gap-x-4">
-          
-              <div className="group relative rounded-xl mb-8">
-        <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
-          {response.map((product) => (
-            <img
-              src={product.imgurl}
-              alt={product.title}
-              className="dark:bg-gray-900 object-cover object-center w-60 h-40"
-            />
+            {response.map((product) => (
+            <a className="group relative rounded-xl mb-8" href={`/product/${product.count}`}
+            >
+              <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
+                <img
+                  src={product.imgurl}
+                  alt={product.name}
+                  className="dark:bg-gray-900 object-cover object-center w-60 h-40"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <p className="mt-1 text-sm text-gray-500">이모지+</p>
+                  <h3 className="text-sm text-gray-700 dark:text-gray-200">
+                    <span aria-hidden="true" className="absolute inset-0"></span>
+                    {product.name}
+                  </h3>
+                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                    {product.price}코인
+                  </p>
+                </div>
+              </div>
+            </a>
           ))}
-        </div>
-
-        <div className="mt-4 flex justify-between">
-          {response.map((product) => (
-            <div >
-              <p className="mt-1 text-sm text-gray-500">이모지</p>
-              <h3 className="text-sm text-gray-700 dark:text-gray-200">
-                <span aria-hidden="true" className="absolute inset-0"></span>
-                {product.title}
-              </h3>
-              <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                {product.price}
-              </p>
-            </div>
-          ))}
-        </div>
 
           
-        </div>
-          <div className="group relative rounded-xl mb-8">
-            <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
-              <img
-                src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMDNfMjU4/MDAxNTIwMDQxODA4Mjc0.gR3L5xx3IbpACbvRRF9j9xjJmO-EPAY35oF1AdBnDcog.WZyeqFi6cMmH-v-R-ec44Ny6ZgVyAJIYMT78p4Rxbkwg.PNG.osy2201/2_%2850%ED%8D%BC%EC%84%BC%ED%8A%B8_%ED%9A%8C%EC%83%89%29_%ED%9A%8C%EC%83%89_%EB%8B%A8%EC%83%89_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_180303.png?type=w800"
-                alt="상품 미리보기 이미지"
-                className="dark:bg-gray-900 object-cover object-center w-60 h-40"
-              />
-            </div>
-            <div className="mt-4 flex justify-between">
-              <div>
-                <p className="mt-1 text-sm text-gray-500">이모지+</p>
-                <h3 className="text-sm text-gray-700 dark:text-gray-200">
-                  <span aria-hidden="true" className="absolute inset-0"></span>
-                  [11.25~] 크리스마스 기념 이모지 🎄
-                </h3>
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                  1,000코인
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="group relative rounded-xl mb-8">
-            <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
-              <img
-                src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMDNfMjU4/MDAxNTIwMDQxODA4Mjc0.gR3L5xx3IbpACbvRRF9j9xjJmO-EPAY35oF1AdBnDcog.WZyeqFi6cMmH-v-R-ec44Ny6ZgVyAJIYMT78p4Rxbkwg.PNG.osy2201/2_%2850%ED%8D%BC%EC%84%BC%ED%8A%B8_%ED%9A%8C%EC%83%89%29_%ED%9A%8C%EC%83%89_%EB%8B%A8%EC%83%89_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_180303.png?type=w800"
-                alt="상품 미리보기 이미지"
-                className="dark:bg-gray-900 object-cover object-center w-60 h-40"
-              />
-            </div>
-            <div className="mt-4 flex justify-between">
-              <div>
-                <p className="mt-1 text-sm text-gray-500">이모지+</p>
-                <h3 className="text-sm text-gray-700 dark:text-gray-200">
-                  <span aria-hidden="true" className="absolute inset-0"></span>
-                  [11.25~] 크리스마스 기념 이모지 🎄
-                </h3>
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                  1,000코인
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="group relative rounded-xl mb-8">
-            <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
-              <img
-                src="https://mblogthumb-phinf.pstatic.net/MjAxODAzMDNfMjU4/MDAxNTIwMDQxODA4Mjc0.gR3L5xx3IbpACbvRRF9j9xjJmO-EPAY35oF1AdBnDcog.WZyeqFi6cMmH-v-R-ec44Ny6ZgVyAJIYMT78p4Rxbkwg.PNG.osy2201/2_%2850%ED%8D%BC%EC%84%BC%ED%8A%B8_%ED%9A%8C%EC%83%89%29_%ED%9A%8C%EC%83%89_%EB%8B%A8%EC%83%89_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_180303.png?type=w800"
-                alt="상품 미리보기 이미지"
-                className="dark:bg-gray-900 object-cover object-center w-60 h-40"
-              />
-            </div>
-            <div className="mt-4 flex justify-between">
-              <div>
-                <p className="mt-1 text-sm text-gray-500">이모지+</p>
-                <h3 className="text-sm text-gray-700 dark:text-gray-200">
-                  <span aria-hidden="true" className="absolute inset-0"></span>
-                  [11.25~] 크리스마스 기념 이모지 🎄
-                </h3>
-                <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                  1,000코인
-                </p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </main>
