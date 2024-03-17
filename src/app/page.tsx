@@ -5,8 +5,9 @@ export type ProductType = {
   count: number;
 };
 export async function getData() {
+  
   const res = await fetch(
-    'http://localhost:3000/api/product', {cache: "no-cache"}
+    `http://${process.env.hosturl}/api/product`, {cache: "no-cache"}
   );
   const data = await res.json();
   console.log(data)
@@ -58,7 +59,6 @@ export default async function ProductPage() {
             >
               <div className="overflow-hidden rounded-xl bg-gray-200 group-hover:opacity-75">
                 <img
-                  key={index}
                   src={product.imgurl}
                   alt={product.name}
                   className="dark:bg-gray-900 object-cover object-center w-60 h-40"
@@ -68,10 +68,10 @@ export default async function ProductPage() {
                 <div>
                   <p className="mt-1 text-sm text-gray-500">이모지+</p>
                   <h3 className="text-sm text-gray-700 dark:text-gray-200">
-                    <span key={index} aria-hidden="true" className="absolute inset-0"></span>
+                    <span  aria-hidden="true" className="absolute inset-0"></span>
                     {product.name}
                   </h3>
-                  <p key={index} className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                  <p className="text-lg font-bold text-gray-900 dark:text-gray-100">
                     {product.price}코인
                   </p>
                 </div>
