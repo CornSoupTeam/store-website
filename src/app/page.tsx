@@ -1,11 +1,11 @@
-export type ProductType = {
+type ProductType = {
   name: string;
   price: number;
   imgurl: string;
   count: number;
 };
-export async function getData() {
-  
+
+async function getData() {
   const res = await fetch(
     `http://${process.env.hosturl}/api/product`, {cache: "no-cache"}
   );
@@ -14,7 +14,6 @@ export async function getData() {
   // console.log(data); // 데이터 확인용 로그
   return data.result;
 }
-
 
 export default async function ProductPage() {
   const response: ProductType[] = await getData();
