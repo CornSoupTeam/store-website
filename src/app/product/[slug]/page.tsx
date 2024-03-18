@@ -1,7 +1,6 @@
-import { useParams } from 'next/navigation'
 import { headers } from "next/headers"
 
-export type ProductType = {
+type ProductType = {
   name: string;
   price: number;
   imgurl: string;
@@ -11,7 +10,7 @@ export type ProductType = {
 type Params = {
   slug: string
 }
-export async function getData(id : number) {
+async function getData(id : number) {
   
   const res = await fetch(
     `http://localhost:3000/api/product/${id}`, {cache: "no-cache"}
