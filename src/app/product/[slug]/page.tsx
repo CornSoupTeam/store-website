@@ -10,39 +10,40 @@ type ProductType = {
 type Params = {
   slug: string
 }
+
 async function getData(id : number) {
-  
   const res = await fetch(
     `http://localhost:3000/api/product/${id}`, {cache: "no-cache"}
   );
-  
   const data = await res.json();
-  // console.log(data); // 데이터 확인용 로그
-  console.log(data.resultArray)
-
   return data.resultArray;
 }
 
 export default async function Example(context: { params: Params }) {
   const id = context.params.slug;
   const response: ProductType[] = await getData(Number(id))
-  
   if (!Array.isArray(response)) {
     console.error('데이터가 배열 형태가 아닙니다.');
     return null;
   }
 
-// ...
-const handleClick = async () => {
-  try {
-  const GET = await fetch(("api/projects"), {
-    method: "GET",
-    headers: headers()
-  })
-  const data = await GET.json()
-      // Update state with response data
+  async function handleClick() {  
+    "use server"
+    const authorization = headers().get('authorization')!;
+
+    try {
+      const res = await fetch(`http://localhost:3000/api/purchase`, {
+        method: 'POST',
+        headers: {authorization }
+      });
+
+      if (res.ok) {
+        console.log('Request successful');
+      } else {
+        console.error('Request failed');
+      }
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error occurred:', error);
     }
   };
   return (
@@ -67,6 +68,7 @@ const handleClick = async () => {
             </div> */}
           </div>
           <button
+            onClick={handleClick}
             type="submit"
             className="mt-4 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-bold text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           >

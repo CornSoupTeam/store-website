@@ -3,7 +3,7 @@ import DiscordProvider from "next-auth/providers/discord";
 import { NextAuthOptions } from "next-auth";
 
 
-const authOptions: NextAuthOptions = {
+export const  authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 
   providers: [
@@ -17,3 +17,4 @@ const authOptions: NextAuthOptions = {
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
+
