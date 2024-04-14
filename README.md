@@ -1,3 +1,8 @@
+개발 도중 필요성이 떨어지고 NextJS SSR과 CSR을 혼용하여 개발 하고 있었는데, Next Auth의 인증 헤더를 API로 넘기지 못하여 개발이 중단 되었습니다.
+추후 시간이 남는다면 다시 인증 헤더 관련 수정을 해볼 예정이며 프로젝트는 임시적으로 EOS 상태입니다.
+
+디자인의 경우 자유롭게 사용 하셔도 됩니다.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
